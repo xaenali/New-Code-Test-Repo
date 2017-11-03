@@ -8,28 +8,49 @@ namespace Codetesting
 {
     class Program
     {
+     /*   static public double permute(params double[] focallength1, params double[] focallength2, params double[] focallength3)
+        {
+            double[] a1 = new double[3];
+
+            
+            a1= Math.Round((double)focallength1 + focallength2, 4);
+
+        }
+
+
         static void Main(string[] args)
         {
-             static public double permute(double[] focallength1, double[] focallength2, double[] focallength3)
-        {
+            double[] focallength1 = new double[] { 140 }; // Initialize array for focal length 1
+            double[] focallength2 = new double[] { -20}; // Initialize array for focal length 2
+            double[] focallength3 = new double[] {1 }; //Initialize array for focal length 3
 
-            int i, j, o ;           
+             int i, j, k ;           
            
             for (i = 0; i < focallength1.Length; i++)
             {
                 for (j = 0; j < focallength2.Length; j++)
                 {
-                    for (o = 0; o < focallength3.Length; o++)
+                    for (k = 0; k < focallength3.Length; k++)
                     {
- double return = focallength1 + focallength2 + focallength3;
-                        return 0;
+                        permute(focallength1[i],focallength2[j],focallength3[k]);
                     }
                 }
             }
-
             
-        } 
+        } */
+
+        static void Main(string[] args)
+{
+    GreetPersons(0);
+    GreetPersons(2,"John", "Jane", "Tarzan");    
+    Console.ReadKey();
+}
+
+static void GreetPersons(int someUnusedParameter, params string[] names)
+{
+    foreach(string name in names)
+        Console.WriteLine("Hello, " + name);
+}
 
         }
     }
-}
