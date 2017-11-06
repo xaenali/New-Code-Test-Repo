@@ -7,18 +7,88 @@ namespace Permute_focal_lengths
 {
     class Program
     {
-        public static double[] perm(double[] F1)
+        public static double perm(double[] F1, double[] F2, double[] F3, double[] MxratioMy, double[] Maxtrack)
         {
-            F1 = new double { 140 };
+            int l;
+            double[] Max = new double[3];
+            for (int i = 0; i < F1.Length; i++)
+            {
+              
+                
+                
+                for (int j = 0; j < F2.Length; j++)
+                {
+                   for(int k = 0; k < F3.Length; k++)
+                   {
+                      // int l;
+                       MxratioMy[k] = Math.Round((double)F1[i] / F3[k], 4);
+                       
+                       Maxtrack[k] = Math.Round((double)F1[i] + 2 * F2[j] + F3[k] + (F2[j] * (((F3[k] * MxratioMy[k]) / F1[i]) + F1[i] / (F3[k] * MxratioMy[k]))), 4);
+                       Max[i] = Maxtrack[k];
+                   //   Console.WriteLine("MaxTrack = {0} and MinTrack = {1}", Max.Max(), Max.Min());
+                       Console.WriteLine("The total system length (d1+d2) = {0}", Maxtrack[k]);
+                     //  Console.WriteLine("MaxTrack = {0} and MinTrack = {1}", Maxtrack.Max(),Maxtrack.Min());
 
-            return 0;
+                      // Console.WriteLine("F1 = {0} , F2 = {1} and F3 = {2}",F1[i],F2[j],F3[k]);
+                   }
+
+
+                   //
+                }
+                Console.WriteLine("MaxTrack = {0} and MinTrack = {1}", Max.Max(), Max.Min());
+            }
+
+            for (int i = 0; i < Max.Length; i++)
+            {
+                Console.WriteLine(Max[i]);
+            }
+                // System.Console.WriteLine();
+                return 0;
         }
 
         static void Main(string[] args)
         {
 
+            double[] focallength1 = new double[] { 140,120,140 };
+            double[] focallength2 = new double[] { -20}; // Initialize array for focal length 2
+            double[] focallength3 = new double[] { 70,71,72 }; //Initialize array for focal length 3
+            double[] a1 = new double[3];
+            double[] MxratioMy = new double[3];
+            double[] Maxtrack = new double[3];
+           // double caseinput;
+            //perm(focallength1,focallength2,focallength3);
 
-           Console.WriteLine(perm(12));
+          //  a1 = perm(focallength1,focallength2);
+
+           // a1[m] = Math.Round((double)focallength1[k] + focallength2[l], 4);
+
+
+             Console.WriteLine("Enter 0,1,2 to see all combinations with each resutls or d1 and d2 for Max Mag ");
+
+             string input = Console.ReadLine();
+
+             switch (input)
+             {
+                 case "0": 
+                    
+                     break;
+
+                 case "1":   
+                     
+                    
+                     break;
+
+                 case "2":
+
+
+                     break;
+
+                 default:
+                    
+                     break;
+             }
+
+            perm(focallength1,focallength2,focallength3,MxratioMy,Maxtrack);
 
 
             /*
