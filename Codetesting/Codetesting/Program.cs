@@ -20,7 +20,7 @@ namespace Permute_focal_lengths
      
             while(!Double.TryParse(Console.ReadLine(), out maginput))
             {
-                Console.WriteLine("input again");
+                Console.WriteLine("input ");
             }
 
 
