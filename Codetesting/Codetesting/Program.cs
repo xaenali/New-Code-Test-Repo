@@ -81,8 +81,6 @@ namespace Permute_focal_lengths
 
                             MaxtrackList.Add(Maxtrack[k]);
 
-                            double length = MaxtrackList.Count;
-
                         }
 
                         else
