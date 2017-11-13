@@ -306,7 +306,7 @@ namespace Permute_focal_lengths
                 Console.WriteLine("\n");
 
 
-                if ((MaxMx > MaxMxratioMy) && (MaxMxratioMy > MaxMy) && (MaxInput <= MaxMx) && (MaxInput >= MaxMy) && (MaxInput <= InputMax) && (MaxInput >= InputMin))
+                if ((MaxInput <= InputMax) && (MaxInput >= InputMin))
                 {
 
                     Console.WriteLine("Conditions satified \n");
@@ -335,7 +335,7 @@ namespace Permute_focal_lengths
 
                 else
 
-                    if ((MaxMxratioMy > MaxMx) || (MaxMy > MaxMxratioMy) || (MaxInput > MaxMx) || (MaxInput < MaxMy) || (MaxInput > InputMax) || (MaxInput < InputMin))
+                    if ((MaxInput > InputMax) || (MaxInput < InputMin))
                 {
 
 
@@ -408,7 +408,7 @@ namespace Permute_focal_lengths
 
 
 
-                if ((MinMx > MinMxratioMy) && (MinMxratioMy > MinMy) && (MinInput <= MinMx) && (MinInput >= MinMy) && (MinInput <= InputMax) && (MinInput >= InputMin))
+                if ((MinInput <= InputMax) && (MinInput >= InputMin))
                 {
 
                     Console.WriteLine("Conditions satified \n");
@@ -437,7 +437,7 @@ namespace Permute_focal_lengths
 
                 else
 
-                    if ((MinMxratioMy > MinMx) || (MinMy > MinMxratioMy) || (MinInput > MinMx) || (MinInput < MinMy) || (MinInput > InputMax) || (MinInput < InputMin))
+                    if ((MinInput > InputMax) || (MinInput < InputMin))
                 {
 
 
