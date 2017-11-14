@@ -9,7 +9,7 @@ namespace Permute_focal_lengths
 {
     class Program
     {
-
+        //------------
         public static double InputMax, InputMin, InputbeamDia, EPDConstrain;
         public static IList<double> MaxtrackList = new List<double>();
         public static IList<double> F1List = new List<double>();
